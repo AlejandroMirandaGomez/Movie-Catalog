@@ -14,11 +14,12 @@
 
 @theme {
   /* Colores personalizados (ojo con el prefijo --color-) */
-  --color-brand: #1D4ED8;
-  --color-brand-light: #3B82F6;
-  --color-brand-dark: #1E3A8A;
+  --color-brand: #1d4ed8;
+  --color-brand-light: #3b82f6;
+  --color-brand-dark: #1e3a8a;
 
-  --color-background: #1F1F1F;
+  --color-background: #1f1f1f;
+  --color-background-dark: #0d0d0d;
 
   /* Fuente por defecto para font-sans */
   --font-sans: "Inter", system-ui, sans-serif;
@@ -31,7 +32,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -48,6 +49,7 @@
   box-sizing: border-box;
 } */
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
