@@ -2,10 +2,52 @@
 
 @layer components {
   .navbar {
-    //@apply bg-gray-950 text-white w-screen px-2 py-2 flex flex-col items-center text-center gap-3 md:flex-row md:items-center md:justify-between;
     @apply text-white bg-black w-screen px-4 py-4 flex flex-col items-center text-center gap-3 md:flex-row md:items-center md:justify-between md:py-8;
   }
   .navbar-link {
-    @apply text-lg px-4 rounded-md hover:bg-gray-700 transition;
+    @apply text-lg px-4 border-b-2  border-transparent;
   }
+  .navbar-link--active {
+    @apply border-white;
+  }
+}
+
+@theme {
+  /* Colores personalizados (ojo con el prefijo --color-) */
+  --color-brand: #1D4ED8;
+  --color-brand-light: #3B82F6;
+  --color-brand-dark: #1E3A8A;
+
+  --color-background: #1F1F1F;
+
+  /* Fuente por defecto para font-sans */
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1F1F1F;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html, body {
+  overflow-x: hidden;
 }

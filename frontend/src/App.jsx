@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <main id="main-content">
+      <main className="flex flex-col px-4 flex-1 w-screen text-white font-sans">
         <Routes>
           <Route path="/" element={<Home movies={moviesExample} />} />
           <Route path="/favorites" element={<Favorites />} />

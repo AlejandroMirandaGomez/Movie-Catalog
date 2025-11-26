@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard";
+import SearchForm from "../components/SearchForm";
 import { useState } from "react";
 
 function Home({ movies }) {
@@ -11,21 +12,12 @@ function Home({ movies }) {
   };
 
   return (
-    <div>
-      <form action="" onSubmit={handleSearch} id="search-form">
-        <input
-          type="text"
-          placeholder="Search for a movie..."
-          value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-          id="search-input"
-        />
-        <button type="submit" id="search-button">
-          Search
-        </button>
-      </form>
+    <div className="py-8">
+      <SearchForm
+        handleSearch={handleSearch}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
 
       <div id="movies-grid">
         {movies.map((movie) => (

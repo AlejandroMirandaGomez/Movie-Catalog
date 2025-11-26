@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+  const isFav = pathname === "/favorites";
+
   return (
     <nav className="navbar">
       {/* Título */}
@@ -10,10 +14,16 @@ function NavBar() {
 
       {/* Links */}
       <div className="flex gap-4 text-lg justify-center md:justify-end">
-        <Link to="/" className="navbar-link">
+        <Link
+          to="/"
+          className={`navbar-link ${isHome && "navbar-link--active"}`}
+        >
           Home
         </Link>
-        <Link to="/favorites" className="navbar-link">
+        <Link
+          to="/favorites"
+          className={`navbar-link ${isFav && "navbar-link--active"}`}
+        >
           Favorites
         </Link>
       </div>
