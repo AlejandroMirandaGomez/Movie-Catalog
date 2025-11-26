@@ -1,9 +1,17 @@
-function MovieCard({ movie }) {
-  function handleClick() {
-    alert("Clicked on movie:", movie.title);
-  }
+import { useMovieContext } from "../contexts/MovieContext";
 
-  let isFavorite = false;
+function MovieCard({ movie }) {
+  const { isFavorite, addFavorite, removeFavorite } = useMovieContext();
+  const favorite = isFavorite(movie.id);
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (favorite) {
+      removeFavorite(movie.id);
+    } else {
+      addFavorite(movie);
+    }
+  }
 
   return (
     <div className="group relative rounded-lg bg-background-dark overflow-hidden flex flex-col h-full max-w-sm hover:-translate-y-1 transition-transform duration-300 w-full">
@@ -18,8 +26,8 @@ function MovieCard({ movie }) {
             onClick={handleClick}
             className={
               "cursor-pointer self-center " +
-              (isFavorite
-                ? "text-red-600/90 hover:text-red-800/90"
+              (favorite
+                ? "text-red-600/90 hover:text-red-700/90"
                 : "text-white/70 hover:text-white/90")
             }
           >
