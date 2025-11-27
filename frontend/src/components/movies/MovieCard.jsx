@@ -1,4 +1,4 @@
-import { useMovieContext } from "../contexts/MovieContext";
+import { useMovieContext } from "../../contexts/MovieContext";
 
 function MovieCard({ movie }) {
   const { isFavorite, addFavorite, removeFavorite } = useMovieContext();

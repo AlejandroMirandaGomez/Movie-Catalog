@@ -4,13 +4,9 @@ import { MovieProvider } from "./contexts/MovieContext";
 
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
-import NavBar from "./components/NavBar";
-
-
-
+import NavBar from "./components/ui/NavBar";
 
 function App() {
-
   return (
     <MovieProvider>
       <NavBar />
