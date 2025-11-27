@@ -45,11 +45,13 @@ function Home() {
 
   return (
     <div className="py-8">
-      <SearchForm
-        handleSearch={handleSearch}
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-      />
+      <div className="sm:pl-6">
+        <SearchForm
+          handleSearch={handleSearch}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
+      </div>
 
       {error && (
         <p className="text-red-500 text-center md:text-left">{error}</p>
