@@ -44,7 +44,7 @@ function Home() {
   };
 
   return (
-    <div className="py-8">
+    <div className="py-12">
       <div className="sm:pl-6">
         <SearchForm
           handleSearch={handleSearch}
