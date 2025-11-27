@@ -46,7 +46,7 @@ Clone the repository and install dependencies:
 
 ```bash
 # clone the repo
-git clone <https://github.com/AlejandroMirandaGomez/Movie-Catalog.git>
+git clone https://github.com/AlejandroMirandaGomez/Movie-Catalog.git
 
 # move into the frontend folder
 cd frontend
